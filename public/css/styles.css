@@ -94,6 +94,8 @@ footer p {
     align-items: center;
 }
 
+
+
 .registro2 {
     width: 50%;
     height: 370px;
@@ -151,4 +153,28 @@ footer p {
 
 .actions input:hover {
     opacity: .8;
+}
+
+/* login */
+
+.container-login {
+    display: flex;
+    height: 600px;
+    align-items: center;
+}
+
+.login2 {
+    width: 50%;
+    height: 250px;
+    border: 1px solid #000099;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px
+}
+
+.login2 h2 {
+    color: #000099;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
 }

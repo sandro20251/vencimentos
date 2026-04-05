@@ -57,5 +57,30 @@ module.exports = class userController {
         res.redirect('/abrirLogin');
     }
 
-    
+    static async loginOpen(req, res) {
+        const { email2, senha2 } = req.body;
+
+        const user = await UserModels.findOne({ where: { email: email2 } });
+
+        if (!user) {
+            req.flash('m', 'O usuário não existe');
+            res.render('usuarios/login');
+            return;
+        }
+
+        const compare = bcrypt.compare(senha2, user.senha);
+
+        if (!compare) {
+            req.flash('m', 'Senha não confere');
+            res.render('usuarios/login');
+            return;
+        }
+
+        req.session.userid = user.id;
+        req.flash('m', `Bem vindo ${user.nome}`);
+        req.session.save(() => {
+            res.redirect('/');
+        })
+    }
+
 }

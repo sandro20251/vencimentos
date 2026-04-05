@@ -51,4 +51,11 @@ module.exports = class userController {
             console.log(err);
         }
     }
+
+    static logout(req, res) {
+        req.session.destroy();
+        res.redirect('/abrirLogin');
+    }
+
+    
 }

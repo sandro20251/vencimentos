@@ -86,3 +86,69 @@ footer h2 {
 footer p {
     text-align: center;
 }
+
+/* registro de usuario */
+.container-registro {
+    display: flex;
+    height: 600px;
+    align-items: center;
+}
+
+.registro2 {
+    width: 50%;
+    height: 370px;
+    border: 1px solid #000099;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px
+}
+
+.registro2 h2 {
+    color: #000099;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label {
+    text-align: center;
+    color: #000099;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.form-control input {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #000099;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.actions input {
+    background-color: #000099;
+    color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+
+}
+
+.actions input:hover {
+    opacity: .8;
+}

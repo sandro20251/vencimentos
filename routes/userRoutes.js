@@ -4,6 +4,7 @@ const userController = require('../controller/userController');
 
 router.get('/', userController.inicio);
 router.get('/abrirRegistro', userController.abrirRegistro);
+router.post('/abrirRegistro', userController.postRegistro);
 router.get('/abrirLogin', userController.abrirLogin);
 
 module.exports = router;

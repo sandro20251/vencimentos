@@ -10,6 +10,7 @@
 </head>
 
 <body>
+   
 
     <header>
         <figure>
@@ -23,6 +24,11 @@
             <a href="#">Logout</a>
         </nav>
     </header>
+     <div class="avisos">
+        {{#if messages.m}}
+        {{messages.m}}
+        {{/if}}
+    </div>
     <div class="container">
         {{{body}}}
     </div>

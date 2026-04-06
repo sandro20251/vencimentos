@@ -26,8 +26,6 @@ cd seu-repo
 # Instale as dependências
 npm install
 
-# Configure o banco de dados
-
 # Rode o projeto
 npm start
 

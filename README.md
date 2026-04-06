@@ -1,4 +1,4 @@
-# Gestãode vencimentos
+# Gestão de vencimentos
 
 Aplicação web para gerenciar vencimentos de produtos em um comércio, com autenticação de usuários
 
@@ -47,7 +47,7 @@ npm start
 - cadastro de usuários
 - login e autenticação
 - CRUD vencimentos
-- filtros especiais por fornecedor produto e data
+- filtros especiais por fornecedor, produto e data
 
 ## 🧠 Aprendizados
 

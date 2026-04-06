@@ -4,4 +4,5 @@ const vencimentosController = require('../controller/vencimentosController');
 
 router.get('/novoVencimento', vencimentosController.abrirNovoVencimento);
 router.post('/addVencimento', vencimentosController.add);
+router.get('/verVencimentos', vencimentosController.ver);
 module.exports = router;

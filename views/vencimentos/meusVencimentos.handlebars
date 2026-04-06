@@ -1,0 +1,8 @@
+<div class="container-meusVencimentos">
+    <h2>Meus vencimentos:</h2>
+    {{#each meusVencimentos}}
+    <div class="vencimento">
+        <p>Produto: {{this.produto}} - Fornecedor:{{this.fornecedor}} - Vencimento:{{this.vencimento}}</p>
+    </div>
+    {{/each}}
+</div>

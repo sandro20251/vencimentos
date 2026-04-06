@@ -30,4 +30,15 @@ module.exports = class vencimentosController {
             console.log(err);
         }
     }
+
+    static async ver(req, res) {
+
+        const meusVencimentos = await vencimentos.findAll({ raw: true, where: { UserModelId: req.session.userid } });
+        req.flash('m', 'Aqui estão seus vencimentos cadastrados');
+        res.render('vencimentos/meusVencimentos', { meusVencimentos });
+
+
+
+
+    }
 }

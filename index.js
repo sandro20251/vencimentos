@@ -49,6 +49,7 @@ app.use((req, res, next) => {
 //  rotas
 
 app.use('/', require('./routes/userRoutes'));
+app.use('/vencimentos', require('./routes/vencimentosRoutes'));
 
 db.sync()
     .then(() => {

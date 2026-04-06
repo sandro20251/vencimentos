@@ -10,7 +10,7 @@
 </head>
 
 <body>
-   
+
 
     <header>
         <figure>
@@ -18,13 +18,27 @@
         </figure>
 
         <nav>
-            <a href="/abrirRegistro">Registre-se aqui</a>
-            <a href="/abrirLogin">Login</a>
+            {{#if session.userid}}
+            <div class="abas">
+                <a href="#">Meus vencimentos</a>
+                <a href="/vencimentos/novoVencimento">Novo vencimento</a>
+                <a href="#">Filtro por fornecedor</a>
+                <a href="#">Filtro por produto</a>
+                <a href="#">Filtro por data</a>
+            </div>
+
             <a href="/">Início</a>
             <a href="/logout">Logout</a>
+
+            {{else}}
+            <a href="/abrirRegistro">Registre-se aqui</a>
+            <a href="/abrirLogin">Login</a>
+
+            {{/if}}
+
         </nav>
     </header>
-     <div class="avisos">
+    <div class="avisos">
         {{#if messages.m}}
         {{messages.m}}
         {{/if}}
@@ -43,7 +57,7 @@
 
             <ul>
                 <li><a href="#">Meus vencimentos</a></li>
-                <li><a href="#">Novo vencimento</a></li>
+                <li><a href="/vencimentos/novoVencimento">Novo vencimento</a></li>
                 <li><a href="#">Filtro por fornecedor</a></li>
                 <li><a href="#">Filtro por produto</a></li>
                 <li><a href="#">Filtro por data</a></li>

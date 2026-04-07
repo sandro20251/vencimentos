@@ -8,11 +8,11 @@
             <p><span>Data de vencimento:</span>{{vencimento.vencimento}}</p>
         </div>
         <div class="botoes">
-            <form action="#">
-                <input type="submit" value="Atualizar">
+            <form action="/vencimentos/excluir/{{vencimento.id}}" method="post">
+                <input type="submit" value="Excluir">
             </form>
             <form action="#">
-                <input type="submit" value="Excluir">
+                <input type="submit" value="Atualizar">
             </form>
         </div>
 

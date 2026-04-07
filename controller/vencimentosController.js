@@ -54,4 +54,12 @@ module.exports = class vencimentosController {
 
         res.render('vencimentos/verVencimento', { vencimento });
     }
+
+    static async excluirVencimento(req, res) {
+        const id = req.params.id;
+
+        await vencimentos.destroy({ where: { id: id } });
+        req.flash('m', 'Vencimento excluído com sucesso!');
+        res.redirect('/vencimentos/verVencimentos');
+    }
 }

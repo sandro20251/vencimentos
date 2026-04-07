@@ -69,4 +69,20 @@ module.exports = class vencimentosController {
         const vencimento = await vencimentos.findOne({ raw: true, where: { id: id } });
         res.render('vencimentos/editarVencimento', { vencimento });
     }
+
+    static async atualizarVencimento(req, res) {
+        const { id, codigo, produto, fornecedor, quantidade, data } = req.body
+
+        const objeto = {
+            codigo,
+            produto,
+            fornecedor,
+            quantidade,
+            vencimento: data
+        }
+
+        await vencimentos.update(objeto, { where: { id: id } });
+        req.flash('m', 'Vencimento atualizado com sucesso!');
+        res.redirect('/vencimentos/verVencimentos');
+    }
 }

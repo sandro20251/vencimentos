@@ -8,4 +8,5 @@ router.get('/verVencimentos', vencimentosController.ver);
 router.get('/abrirVencimento/:id', vencimentosController.abrirVencimento);
 router.post('/excluir/:id' ,vencimentosController.excluirVencimento);
 router.get('/editarVencimento/:id', vencimentosController.abrirEdicao);
+router.post('/atualizarVencimento', vencimentosController.atualizarVencimento);
 module.exports = router;

@@ -1,7 +1,8 @@
 <div class="container-novoVencimento">
     <div class="vencimentos2">
         <h2>Edite o seu vencimento:</h2>
-        <form action="#">
+        <form action="/vencimentos/atualizarVencimento" method="post">
+            <input type="hidden" name="id" value="{{vencimento.id}}">
             <div class="form-control">
                 <label for="codigo">Código do produto:</label>
                 <input type="text" name="codigo" value="{{vencimento.codigo}}">

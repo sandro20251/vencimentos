@@ -295,3 +295,62 @@ footer p {
     padding: 10px;
     line-height: 30px;
 }
+
+/* Ver vencimento */
+
+.container-verVencimento {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+.verVencimento2 {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #000099;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+
+}
+
+.vencimento3 h2 {
+    color: #000099;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.vencimento3 p {
+    text-align: center;
+    color: #000099;
+    padding: 3px;
+
+}
+
+.vencimento3 span {
+    font-weight: bold;
+}
+
+.verVencimento2 .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+.verVencimento2 .botoes input {
+    background-color: #000099;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.verVencimento2 .botoes input:hover {
+    opacity: .8;
+}

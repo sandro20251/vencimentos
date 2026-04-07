@@ -1,3 +1,4 @@
+const UserModels = require('../models/UserModels');
 const VencimentosModels = require('../models/VencimentosModels');
 const vencimentos = require('../models/VencimentosModels');
 
@@ -37,5 +38,20 @@ module.exports = class vencimentosController {
         req.flash('m', 'Aqui estão seus vencimentos cadastrados');
         res.render('vencimentos/meusVencimentos', { meusVencimentos });
 
+
+
+    }
+
+    static async abrirVencimento(req, res) {
+        const id = req.params.id;
+
+        const vencimento = await vencimentos.findOne({
+            raw: true,
+            where: {
+                id: id
+            }
+        })
+
+        res.render('vencimentos/verVencimento', { vencimento });
     }
 }

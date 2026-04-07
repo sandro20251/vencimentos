@@ -255,8 +255,9 @@ footer p {
     color: #000099;
     font-weight: bold;
     margin: 10px;
+    padding-bottom: 20px;
     text-align: center;
-
+    border-bottom: 1px solid #ccc;
 
 }
 

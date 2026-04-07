@@ -1,30 +1,33 @@
 <div class="container-novoVencimento">
-    <h2>Cadastre um novo ítem</h2>
-    <form action="/vencimentos/addVencimento" method="POST">
-        <div class="form-control">
-            <label for="codigo">Código do produto:</label>
-            <input type="text" name="codigo" placeholder="Digite o código do produto">
-        </div>
-        <div class="form-control">
-            <label for="produto">Produto:</label>
-            <input type="text" name="produto" placeholder="Nome do produto">
-        </div>
-        <div class="form-control">
-            <label for="fornecedor">Fornecedor:</label>
-            <input type="text" name="fornecedor" placeholder="digite o fornecedor">
-        </div>
-        <div class="form-control">
-            <label for="quantidade">Quantidade:</label>
-            <input type="text" name="quantidade">
-        </div>
-        <div class="form-control">
-            <label for="data">Data de vencimento:</label>
-            <input type="text" name="data" placeholder="Digite a data de vencimento">
-        </div>
-        <div class="actions">
-            <input type="reset" value="Limpar">
-            <input type="submit" value="Salvar">
-        </div>
-    </form>
+    <div class="vencimentos2">
+        <h2>Cadastre um novo ítem</h2>
+        <form action="/vencimentos/addVencimento" method="POST">
+            <div class="form-control">
+                <label for="codigo">Código do produto:</label>
+                <input type="text" name="codigo" placeholder="Digite o código do produto">
+            </div>
+            <div class="form-control">
+                <label for="produto">Produto:</label>
+                <input type="text" name="produto" placeholder="Nome do produto">
+            </div>
+            <div class="form-control">
+                <label for="fornecedor">Fornecedor:</label>
+                <input type="text" name="fornecedor" placeholder="digite o fornecedor">
+            </div>
+            <div class="form-control">
+                <label for="quantidade">Quantidade:</label>
+                <input type="text" name="quantidade" placeholder="Digite a quantidade de produtos a vencer">
+            </div>
+            <div class="form-control">
+                <label for="data">Data de vencimento:</label>
+                <input type="text" name="data" placeholder="Digite a data de vencimento">
+            </div>
+            <div class="actions">
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Salvar">
+            </div>
+        </form>
+    </div>
+
 
 </div>

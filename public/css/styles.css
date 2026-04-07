@@ -52,7 +52,7 @@ figure img {
     position: relative;
     top: 10px;
     border-radius: 10px;
-   
+
     padding-left: 5px;
     padding-right: 5px;
     z-index: 1;
@@ -208,4 +208,29 @@ footer p {
 
 .avisos {
     color: #000099;
+}
+
+/* cadastrar vencimentos */
+.container-novoVencimento {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vencimentos2 {
+    width: 50%;
+    height: 500px;
+    border: 1px solid #000099;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.vencimentos2 h2 {
+    color: #000099;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    margin-bottom: 30px;
 }

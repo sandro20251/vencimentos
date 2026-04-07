@@ -37,8 +37,5 @@ module.exports = class vencimentosController {
         req.flash('m', 'Aqui estão seus vencimentos cadastrados');
         res.render('vencimentos/meusVencimentos', { meusVencimentos });
 
-
-
-
     }
 }

@@ -17,8 +17,9 @@
             <img src="/img/logo.png" alt="Logotipo Carrefour">
         </figure>
 
+
+        {{#if session.userid}}
         <nav>
-            {{#if session.userid}}
             <div class="abas">
                 <a href="/vencimentos/verVencimentos">Meus vencimentos</a>
                 <a href="/vencimentos/novoVencimento">Novo vencimento</a>
@@ -26,17 +27,25 @@
                 <a href="#">Filtro por produto</a>
                 <a href="#">Filtro por data</a>
             </div>
+        </nav>
+        <nav>
+            <div class="abas2">
+                <a href="/">Início</a>
+                <a href="/logout">Logout</a>
 
-            <a href="/">Início</a>
-            <a href="/logout">Logout</a>
-
-            {{else}}
+            </div>
+        </nav>
+        {{else}}
+        <nav>
             <a href="/abrirRegistro">Registre-se aqui</a>
             <a href="/abrirLogin">Login</a>
 
-            {{/if}}
-
         </nav>
+
+
+        {{/if}}
+
+
     </header>
     <div class="avisos">
         {{#if messages.m}}

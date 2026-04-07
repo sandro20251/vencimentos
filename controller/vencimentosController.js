@@ -62,4 +62,11 @@ module.exports = class vencimentosController {
         req.flash('m', 'Vencimento excluído com sucesso!');
         res.redirect('/vencimentos/verVencimentos');
     }
+
+    static async abrirEdicao(req, res) {
+        const id = req.params.id;
+
+        const vencimento = await vencimentos.findOne({ raw: true, where: { id: id } });
+        res.render('vencimentos/editarVencimento', { vencimento });
+    }
 }

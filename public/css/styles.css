@@ -234,3 +234,63 @@ footer p {
     text-align: center;
     margin-bottom: 30px;
 }
+
+/* meus vencimentos */
+.container-meusVencimentos {
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.meusVencimentos2 {
+    width: 50%;
+    border: 1px solid #000099;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.meusVencimentos2 h2 {
+    color: #000099;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+
+
+}
+
+.vencimento {
+
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #000099;
+
+}
+
+.vencimento p {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+
+}
+
+.vencimento span {
+    line-height: 50px;
+}
+
+.vencimento a {
+
+    border-radius: 10px;
+    background-color: #000099;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    line-height: 30px;
+}

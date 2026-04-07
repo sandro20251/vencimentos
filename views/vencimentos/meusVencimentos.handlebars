@@ -1,9 +1,13 @@
 <div class="container-meusVencimentos">
-    <h2>Meus vencimentos:</h2>
-    {{#each meusVencimentos}}
-    <div class="vencimento">
-        <p>Produto: {{this.produto}} - Fornecedor:{{this.fornecedor}} - Vencimento:{{this.vencimento}} <a
-                href="#">vizualizar</a><a href="#">Excluir</a><a href="#">Alterar</a></p>
+    <div class="meusVencimentos2">
+        <h2>Meus vencimentos:</h2>
+        {{#each meusVencimentos}}
+        <div class="vencimento">
+            <p><span>{{this.produto}} - {{this.fornecedor}} - {{this.vencimento}}</span> <a href="#">vizualizar</a>
+
+            </p>
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
+
 </div>

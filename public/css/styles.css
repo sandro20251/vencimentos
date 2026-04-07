@@ -154,8 +154,9 @@ footer p {
 .form-control input {
     width: 60%;
     margin: 0 auto;
-    border: 1px solid #000099;
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+
     padding: 5px;
     text-align: center;
 }

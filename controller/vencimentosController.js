@@ -1,6 +1,7 @@
 const UserModels = require('../models/UserModels');
 const VencimentosModels = require('../models/VencimentosModels');
 const vencimentos = require('../models/VencimentosModels');
+const { Op } = require('sequelize');
 
 module.exports = class vencimentosController {
     static abrirNovoVencimento(req, res) {
@@ -84,5 +85,40 @@ module.exports = class vencimentosController {
         await vencimentos.update(objeto, { where: { id: id } });
         req.flash('m', 'Vencimento atualizado com sucesso!');
         res.redirect('/vencimentos/verVencimentos');
+    }
+
+    static async abrirBuscaFornecedor(req, res) {
+        res.render('vencimentos/filtroPorFornecedor');
+    }
+
+    static async buscaFornecedor(req, res) {
+        const fornecedor = req.body.buscaFornecedor;
+        const meusVencimentos = await vencimentos.findAll({
+            raw: true, where: {
+                fornecedor: {
+                    [Op.like]: `%${fornecedor}%`
+                }
+            }
+        })
+
+        res.render('vencimentos/meusVencimentos', { meusVencimentos })
+    }
+
+    static async abrirBuscaProduto(req, res) {
+        res.render('vencimentos/filtroPorProdutos');
+    }
+
+    static async buscaProduto(req, res) {
+        const produto = req.body.buscaProduto;
+
+        const meusVencimentos = await vencimentos.findAll({
+            raw: true, where: {
+                produto: {
+                    [Op.like]: `%${produto}%`
+                }
+            }
+        })
+
+        res.render('vencimentos/meusVencimentos', { meusVencimentos });
     }
 }

@@ -13,4 +13,6 @@ router.get('/buscaFornecedor', vencimentosController.abrirBuscaFornecedor);
 router.post('/buscaFornecedor', vencimentosController.buscaFornecedor);
 router.get('/buscaProduto', vencimentosController.abrirBuscaProduto);
 router.post('/buscaProduto', vencimentosController.buscaProduto);
+router.get('/buscaData', vencimentosController.abrirBuscaData);
+router.post('/buscaData', vencimentosController.buscarData);
 module.exports = router;

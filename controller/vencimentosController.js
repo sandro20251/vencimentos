@@ -121,4 +121,20 @@ module.exports = class vencimentosController {
 
         res.render('vencimentos/meusVencimentos', { meusVencimentos });
     }
+
+    static async abrirBuscaData(req, res) {
+        res.render('vencimentos/filtroPorData')
+    }
+
+    static async buscarData(req, res) {
+        const data = req.body.buscaData;
+
+        const meusVencimentos = await vencimentos.findAll({
+            raw: true, where: {
+                vencimento:{
+                    [Op.like]: `%${data}%`
+            }}
+        })
+        res.render('vencimentos/meusVencimentos', { meusVencimentos })
+    }
 }

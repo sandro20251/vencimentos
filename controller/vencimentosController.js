@@ -26,7 +26,7 @@ module.exports = class vencimentosController {
             const vencimento = await vencimentos.create(novoVencimento);
             req.flash('m', 'Vencimento adicionado com sucesso');
             req.session.save(() => {
-                res.redirect('/vencimentos/novoVencimento');
+                res.redirect('/vencimentos/verVencimentos');
             })
 
 
@@ -335,4 +335,6 @@ module.exports = class vencimentosController {
 
         res.send(pdf);
     }
+
+    
 }

@@ -19,4 +19,5 @@ router.get('/PDFPorFornecedor', vencimentosController.PdfFornecedor);
 router.get('/PDFPorProduto', vencimentosController.PdfProduto);
 router.get('/PDFPorData', vencimentosController.PdfData);
 router.get('/PDFTodos', vencimentosController.PdfTodos);
+
 module.exports = router;

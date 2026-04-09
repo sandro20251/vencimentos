@@ -1,5 +1,7 @@
 <div class="container-meusVencimentos">
+
     <div class="meusVencimentos2">
+
         <h2>Meus vencimentos:</h2>
         {{#each meusVencimentos}}
         <div class="vencimento">
@@ -7,6 +9,14 @@
                     href="/vencimentos/abrirVencimento/{{this.id}}">vizualizar</a></p>
         </div>
         {{/each}}
+        {{!-- Gerar pdf --}}
+        <div class="actions">
+            <form action="/vencimentos/PdfTodos" method="GET">
+                <input type="submit" value="Gerar PDF completo">
+            </form>
+        </div>
+
     </div>
+
 
 </div>

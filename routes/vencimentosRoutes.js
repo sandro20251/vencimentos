@@ -15,4 +15,8 @@ router.get('/buscaProduto', vencimentosController.abrirBuscaProduto);
 router.post('/buscaProduto', vencimentosController.buscaProduto);
 router.get('/buscaData', vencimentosController.abrirBuscaData);
 router.post('/buscaData', vencimentosController.buscarData);
+router.get('/PDFPorFornecedor', vencimentosController.PdfFornecedor);
+router.get('/PDFPorProduto', vencimentosController.PdfProduto);
+router.get('/PDFPorData', vencimentosController.PdfData);
+router.get('/PDFTodos', vencimentosController.PdfTodos);
 module.exports = router;

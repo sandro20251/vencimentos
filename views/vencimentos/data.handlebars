@@ -1,0 +1,21 @@
+<div class="container-meusVencimentos">
+    <div class="meusVencimentos2">
+       
+        <h2>Vencimentos por data:</h2>
+        {{#each meusVencimentos}}
+        <div class="vencimento">
+            <p><span>{{this.produto}} - {{this.fornecedor}} - {{this.vencimento}}</span> <a
+                    href="/vencimentos/abrirVencimento/{{this.id}}">vizualizar</a></p>
+        </div>
+        {{/each}}
+         {{!-- Gerar pdf --}}
+        <div class="actions">
+            <form action="/vencimentos/PdfPorData" method="GET">
+                <input type="hidden" name="data" value="{{data}}">
+                <input type="submit" value="Gerar PDF desse relatório">
+            </form>
+        </div>
+    </div>
+
+
+</div>

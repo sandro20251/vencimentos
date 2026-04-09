@@ -26,6 +26,9 @@ cd seu-repo
 # Instale as dependências
 npm install
 
+# Configuração banco de dados
+crie um banco de dados vazio com o nome 'vencimentos'
+
 # Rode o projeto
 npm start
 

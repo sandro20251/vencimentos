@@ -5,6 +5,26 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.avisos {
+    width: 80%;
+    color: #761212;
+    text-align: center;
+    margin: 5px auto;
+    padding: 10px;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100%;
+    flex: 1;
+}
+
 /* header */
 
 header {
@@ -14,6 +34,7 @@ header {
     justify-content: space-between;
     line-height: 60px;
     padding-right: 10px;
+
 }
 
 header nav {
@@ -70,10 +91,10 @@ figure img {
 
 /* container */
 
-.container {
+/* .container {
     min-height: 680px;
 
-}
+} */
 
 /* footer */
 
@@ -360,4 +381,94 @@ footer p {
 
 .verVencimento2 .botoes input:hover {
     opacity: .8;
+}
+
+/* filtro por fornecedor */
+
+
+
+.filtroFornecedor2 h2,
+.filtroProduto2 h2,
+.filtroData2 h2 {
+    color: #000099;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.filtroFornecedor2 form,
+.filtroProduto2 form,
+.filtroData2 form {
+
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #000099;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+
+
+@media screen and (max-width:320px) {
+    header {
+        justify-content: space-between;
+    }
+
+
+
+    .login2 {
+        width: 70%;
+        height: 280px;
+    }
+
+    .container {
+        min-height: 450px;
+    }
+
+    footer .mapa {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        margin-top: 20px;
+    }
+
+    .registro2 {
+        width: 70%;
+        height: 420px;
+    }
+
+    .meusVencimentos2 {
+        width: 80%;
+
+    }
+
+    .vencimento p {
+        flex-direction: column;
+    }
+
+    .vencimentos2 {
+        width: 80%;
+        height: 500px;
+    }
+
+    .verVencimento2 {
+        width: 80%;
+        height: 320px;
+    }
+
+    .filtroFornecedor2 form,
+    .filtroProduto2 form,
+    .filtroData2 form {
+        width: 80%;
+    }
+
+    .filtroFornecedor2 h2,
+    .filtroProduto2 h2,
+    .filtroData2 h2 {
+        margin-bottom: 100px;
+    }
 }

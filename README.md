@@ -15,7 +15,7 @@ BCryptjs
 - Node.js instalado
 - MySQL rodando
 
-## video de demonstração
+## Vídeo de demonstração
 https://www.youtube.com/watch?v=hyj4mV2WXlQ
 
 ### Passos

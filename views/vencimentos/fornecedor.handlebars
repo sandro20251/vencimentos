@@ -4,8 +4,15 @@
         <h2>Vencimentos por fornecedor:</h2>
         {{#each meusVencimentos}}
         <div class="vencimento">
-            <p><span>{{this.produto}} - {{this.fornecedor}} - {{this.vencimento}}</span> <a
-                    href="/vencimentos/abrirVencimento/{{this.id}}">vizualizar</a></p>
+            <div class="v1">
+                <p>{{this.produto}}</p>
+                <p>{{this.fornecedor}}</p>
+                <p>{{this.vencimento}}</p>
+            </div>
+            <div class="v2">
+                <a href="/vencimentos/abrirVencimento/{{this.id}}">vizualizar</a>
+            </div>
+
         </div>
         {{/each}}
         {{!-- Gerar pdf --}}

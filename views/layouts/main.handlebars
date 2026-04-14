@@ -7,7 +7,7 @@
     <title>Carrefour - Vencimentos</title>
     <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/styles.css">
-  
+
 </head>
 
 <body>
@@ -17,35 +17,39 @@
         <figure>
             <img src="/img/logo.png" alt="Logotipo Carrefour">
         </figure>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+        <div class="menu">
+            {{#if session.userid}}
+            <nav>
+                <div class="abas">
+                    <a href="/vencimentos/verVencimentos">Meus vencimentos</a>
+                    <a href="/vencimentos/novoVencimento">Novo vencimento</a>
+                    <a href="/vencimentos/buscaFornecedor">Filtro por fornecedor</a>
+                    <a href="/vencimentos/buscaProduto">Filtro por produto</a>
+                    <a href="/vencimentos/buscaData">Filtro por data</a>
+
+                </div>
+            </nav>
+            <nav>
+                <div class="abas2">
+                    <a href="/">Início</a>
+                    <a href="/logout">Logout</a>
+
+                </div>
+            </nav>
+            {{else}}
+            <nav>
+                <a href="/abrirRegistro">Registre-se aqui</a>
+                <a href="/abrirLogin">Login</a>
+
+            </nav>
 
 
-        {{#if session.userid}}
-        <nav>
-            <div class="abas">
-                <a href="/vencimentos/verVencimentos">Meus vencimentos</a>
-                <a href="/vencimentos/novoVencimento">Novo vencimento</a>
-                <a href="/vencimentos/buscaFornecedor">Filtro por fornecedor</a>
-                <a href="/vencimentos/buscaProduto">Filtro por produto</a>
-                <a href="/vencimentos/buscaData">Filtro por data</a>
+            {{/if}}
 
-            </div>
-        </nav>
-        <nav>
-            <div class="abas2">
-                <a href="/">Início</a>
-                <a href="/logout">Logout</a>
-
-            </div>
-        </nav>
-        {{else}}
-        <nav>
-            <a href="/abrirRegistro">Registre-se aqui</a>
-            <a href="/abrirLogin">Login</a>
-
-        </nav>
-
-
-        {{/if}}
+        </div>
 
 
     </header>
@@ -78,7 +82,12 @@
         <p>Criado por: Sandro da Paixão Coelho </p>
     </footer>
 
-    
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>

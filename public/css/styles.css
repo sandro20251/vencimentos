@@ -417,8 +417,9 @@ footer p {
     display: flex;
     flex-direction: row;
     gap: 10px;
-
 }
+
+
 
 /*  menu hanburguer */
 
@@ -435,6 +436,7 @@ footer p {
 /* estrutura do menu */
 .menu {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 

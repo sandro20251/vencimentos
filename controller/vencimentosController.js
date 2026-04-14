@@ -99,7 +99,8 @@ module.exports = class vencimentosController {
             raw: true, where: {
                 fornecedor: {
                     [Op.like]: `%${fornecedor}%`
-                }
+                },
+                UserModelId: req.session.userid
             }
         })
 
@@ -117,7 +118,9 @@ module.exports = class vencimentosController {
             raw: true, where: {
                 produto: {
                     [Op.like]: `%${produto}%`
-                }
+                },
+                UserModelId: req.session.userid
+
             }
         })
 
@@ -135,7 +138,8 @@ module.exports = class vencimentosController {
             raw: true, where: {
                 vencimento: {
                     [Op.like]: `%${data}%`
-                }
+                },
+                UserModelId: req.session.userid
             }
         })
         res.render('vencimentos/data', { meusVencimentos, data })
@@ -336,5 +340,5 @@ module.exports = class vencimentosController {
         res.send(pdf);
     }
 
-    
+
 }
